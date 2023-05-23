@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import {getStorage} from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB7dv0841NzSfzA4N6_zx2vm7NOWInF_mE",
-  authDomain: "uploadingfile-b7ae1.firebaseapp.com",
-  projectId: "uploadingfile-b7ae1",
-  storageBucket: "uploadingfile-b7ae1.appspot.com",
-  messagingSenderId: "262934578463",
-  appId: "1:262934578463:web:081374783de375fd2adc2a"
+  apiKey: process.env.REACT_APP_API_KEY ,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN ,
+  projectId: process.env.REACT_APP_PROJECT_ID ,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET ,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID ,
+  appId: process.env.REACT_APP_APPID 
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const strage = getStorage(app)
+export const storage = getStorage(app);
